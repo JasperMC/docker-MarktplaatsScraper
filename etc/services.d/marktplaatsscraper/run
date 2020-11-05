@@ -1,2 +1,2 @@
 #!/usr/bin/with-contenv sh
-exec python3 /config/app/Main.py
+exec python3 /config/Main.py

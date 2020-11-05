@@ -7,4 +7,4 @@ RUN apk update
 ADD etc /etc
 ADD entrypoint /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["sh" "/entrypoint.sh"]

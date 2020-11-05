@@ -1,1 +1,10 @@
-
+version: "3.8"
+services:
+  marktplaatsscraper:
+    build: .
+    volumes:
+      - /config:/
+    environment:
+      PUSHOVER_API_TOKEN: TOKEN
+      PUSHOVER_USER: USER
+      SCANNING_INTERVAL: 120

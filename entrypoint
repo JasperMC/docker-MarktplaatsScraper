@@ -22,7 +22,7 @@ pip3 install -U python-pushover
 
 # Download MarktplaatsScraper
 git clone https://github.com/jaspercardol/MarktplaatsScraper.git
-cp MarktplaatsScraper /MarktplaatsScraper
+cp -u -R MarktplaatsScraper/* /config
 
 
 # Execute it.

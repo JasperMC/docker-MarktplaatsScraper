@@ -1,3 +1,4 @@
 #!/usr/bin/with-contenv sh
-#exec python3 /config/Main.py -a ${PUSHOVER_API_TOKEN} -u ${PUSHOVER_USER} -i ${SCANNING_INTERVAL}
+#exec 
+#python3 /config/Main.py -a "${PUSHOVER_API_TOKEN}" -u "${PUSHOVER_USER}" -i "${SCANNING_INTERVAL}"
 echo "Hello World!"

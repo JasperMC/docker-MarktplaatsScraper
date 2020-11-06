@@ -5,7 +5,7 @@ services:
     volumes:
       - /config:/CONFIG_DIR
     environment:
-      PUSHOVER_API_TOKEN: TOKEN
-      PUSHOVER_USER: USER
+      PUSHOVER_API_TOKEN: TOKEN_HERE
+      PUSHOVER_USER: USER_HERE
       SCANNING_INTERVAL: 120
       WEBDRIVER_PATH: /usr/bin/chromedriver

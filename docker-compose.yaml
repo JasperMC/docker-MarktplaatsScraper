@@ -3,7 +3,7 @@ services:
   marktplaatsscraper:
     build: .
     volumes:
-      - /config:/CONFIG_DIR
+      - /CONFIG_DIR:/config
     environment:
       PUSHOVER_API_TOKEN: TOKEN_HERE
       PUSHOVER_USER: USER_HERE

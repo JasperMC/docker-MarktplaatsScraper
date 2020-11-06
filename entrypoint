@@ -1,30 +1,37 @@
 #!/bin/bash
 
 
-# Update repo's!
-echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" > /etc/apk/repositories
-echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
+dpkg -s python3
+if [ $? -eq 0 ]
+then
+  echo "The script ran ok"
+  exit 0
+else
+  # Update repo's!
+  echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" > /etc/apk/repositories
+  echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
 
-# Update APK
-apk update
+  # Update APK
+  apk update
 
-# Install git
-apk add git
+  # Install git
+  apk add git
 
-# Install Chromium + Webdriver
-apk add chromium
-apk add chromium-chromedriver
+  # Install Chromium + Webdriver
+  apk add chromium
+  apk add chromium-chromedriver
 
-# Install Python and selenium
-apk add python3
-apk add py3-pip
-pip3 install -U selenium
-pip3 install -U python-pushover
+  # Install Python and selenium
+  apk add python3
+  apk add py3-pip
+  pip3 install -U selenium
+  pip3 install -U python-pushover
 
-# Download MarktplaatsScraper
-git clone https://github.com/jaspercardol/MarktplaatsScraper.git
-cp -u -R MarktplaatsScraper/* /config
-rm -rf MarktplaatsScraper
+  # Download MarktplaatsScraper
+  git clone https://github.com/jaspercardol/MarktplaatsScraper.git
+  cp -u -R MarktplaatsScraper/* /config
+  rm -rf MarktplaatsScraper
+fi
 
 
 # Execute it.

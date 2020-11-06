@@ -2,8 +2,7 @@
 
 
 apk info -vv | grep 'python3'
-echo "APK Info returned: " $?
-if [[ "$?" -eq 1 ]]; then
+if [[ $? -eq 1 ]]; then
   # Update repo's!
   echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" > /etc/apk/repositories
   echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories

@@ -8,3 +8,4 @@ services:
       PUSHOVER_API_TOKEN: TOKEN
       PUSHOVER_USER: USER
       SCANNING_INTERVAL: 120
+      WEBDRIVER_PATH: /usr/bin/chromedriver

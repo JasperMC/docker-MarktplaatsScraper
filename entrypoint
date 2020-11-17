@@ -20,13 +20,13 @@ if [[ $? -eq 1 ]]; then # It is running for the first time! Let's install things
   # Install Python and selenium
   apk add python3
   apk add py3-pip
-  pip3 install -U selenium
-  pip3 install -U python-pushover
 
-  # Download MarktplaatsScraper
+  # Download MarktplaatsScraper and install requirements
   git clone https://github.com/jaspercardol/MarktplaatsScraper.git
   cp -u -R MarktplaatsScraper/* /config
   rm -rf MarktplaatsScraper
+  cd /config
+  pip3 install -r requirements.txt
 fi
 
 

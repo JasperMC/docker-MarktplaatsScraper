@@ -9,3 +9,5 @@ services:
       PUSHOVER_USER: USER_HERE
       SCANNING_INTERVAL: 120
       WEBDRIVER_PATH: /usr/bin/chromedriver
+    restart_policy:
+        condition: unless-stopped

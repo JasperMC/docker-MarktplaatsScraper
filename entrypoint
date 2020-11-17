@@ -1,8 +1,8 @@
 #!/bin/bash
 
-
+# Check if this is the first time running the container
 apk info -vv | grep 'python3'
-if [[ $? -eq 1 ]]; then
+if [[ $? -eq 1 ]]; then # It is running for the first time! Let's install things..
   # Update repo's!
   echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" > /etc/apk/repositories
   echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories

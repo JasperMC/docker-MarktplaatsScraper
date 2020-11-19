@@ -22,9 +22,7 @@ if [[ $? -eq 1 ]]; then # It is running for the first time! Let's install things
   apk add python3
   apk add py3-pip
   pip3 install wheel
-fi
 
-if [ "$(ls -A /config)" ]; then
   # Download MarktplaatsScraper and install requirements
   git clone https://github.com/jaspercardol/MarktplaatsScraper.git
   cp -u -R MarktplaatsScraper/* /config
@@ -33,6 +31,6 @@ if [ "$(ls -A /config)" ]; then
   pip3 install -r requirements.txt
   pip3 install python-pushover
   pip3 install selenium
-  
 fi
+  
 exit 0

@@ -28,7 +28,3 @@ if [[ $? -eq 1 ]]; then # It is running for the first time! Let's install things
   cd /config
   pip3 install -r requirements.txt
 fi
-
-
-# Execute it.
-exec /init

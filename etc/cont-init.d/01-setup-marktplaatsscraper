@@ -35,7 +35,7 @@ if [[ $? -eq 1 ]]; then # It is running for the first time! Let's install things
   #pip3 install selenium
   #pip install python-pushover
   #pip install selenium
-  echo pip3 list | grep 'python-pushover'
+  pip3 list
   pip3 list | grep 'python-pushover'
   if [[ $? -eq 1 ]]; then
     

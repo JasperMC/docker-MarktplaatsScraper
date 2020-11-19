@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/with-contenv sh
 
 # Check if this is the first time running the container
 apk info -vv | grep 'python3'

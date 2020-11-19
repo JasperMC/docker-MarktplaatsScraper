@@ -11,7 +11,7 @@ if [[ $? -eq 1 ]]; then # It is running for the first time! Let's install things
   apk update
 
   # Install git
-  apk add git
+  apk add git tar
 
   # Install Chromium + Webdriver
   apk add chromium

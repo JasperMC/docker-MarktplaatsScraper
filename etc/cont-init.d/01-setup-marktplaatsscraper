@@ -27,5 +27,5 @@ if [[ $? -eq 1 ]]; then # It is running for the first time! Let's install things
   rm -rf MarktplaatsScraper
   cd /config
   #pip3 install -r requirements.txt
-  pip3 install python-pushover selenium
+  sudo pip3 install python-pushover selenium
 fi

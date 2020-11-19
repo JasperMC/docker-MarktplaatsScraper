@@ -1,6 +1,7 @@
 #!/usr/bin/with-contenv sh
 
 # Check if this is the first time running the container
+apk update
 apk info -vv | grep 'python3'
 if [[ $? -eq 1 ]]; then # It is running for the first time! Let's install things..
   # Update repo's!

@@ -30,18 +30,16 @@ if [[ $? -eq 1 ]]; then # It is running for the first time! Let's install things
   cp -u -R MarktplaatsScraper/* /config
   rm -rf MarktplaatsScraper
   cd /config
-  #pip3 install -r requirements.txt
-  pip3 install python-pushover
-  #pip3 install selenium
-  #pip install python-pushover
-  #pip install selenium
-  pip3 list
+  pip3 install -r requirements.txt
   pip3 list | grep 'python-pushover'
   if [[ $? -eq 1 ]]; then
     
     echo "Python Pushover is installed!"
-    echo python -v
-    echo python3 -v
+  fi
+  
+  pip3 list | grep 'selenium'
+  if [[ $? -eq 1 ]]; then
+    echo "Selenium is installed!"
   fi
 fi
   

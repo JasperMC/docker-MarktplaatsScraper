@@ -1,5 +1,5 @@
 # docker-MarktplaatsScraper
-A Docker container image for https://github.com/jaspercardol/MarktplaatsScraper
+A Docker container image for https://github.com/JasperMC/MarktplaatsScraper
 
 # Usage
 1. git clone this repository to your docker host.
